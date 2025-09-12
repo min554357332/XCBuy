@@ -40,12 +40,12 @@ public struct XCBuy {
         }
     }
     
-    public static func info(_ productIds: Set<String>) async -> Set<Product> {
+    public static func info(_ productIds: Set<String>) async -> Set<XCProduct> {
         let products = await SwiftyStoreKit.async_retrieveProductsInfo(productIds)
-        var results: Set<Product> = []
+        var results: Set<XCProduct> = []
         for product in products {
             // priceLocale
-            let p = Product(id: product.productIdentifier, name: product.localizedTitle, price: product.localizedPrice ?? "-")
+            let p = XCProduct(id: product.productIdentifier, name: product.localizedTitle, price: product.localizedPrice ?? "-")
             results.insert(p)
         }
         return results
