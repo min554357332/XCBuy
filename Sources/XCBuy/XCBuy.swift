@@ -197,7 +197,7 @@ struct XCReceiptInfo: @unchecked Sendable {
 }
 
 public struct XCProduct: Hashable {
-    let id: String
-    let name: String
-    let price: String
+    public let id: String
+    public let name: String
+    public let price: String
 }
