@@ -196,7 +196,7 @@ struct XCReceiptInfo: @unchecked Sendable {
     let receipt: ReceiptInfo
 }
 
-public struct XCProduct: Hashable {
+public struct XCProduct: Hashable, Sendable {
     public let id: String
     public let name: String
     public let price: String
